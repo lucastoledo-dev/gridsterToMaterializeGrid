@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0046)https://materializecss.com/pushpin-demo.html#! -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +8,12 @@
     <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
     <title>Pushpin Demo - Materialize</title>
     <!-- Favicons-->
-    <link rel="apple-touch-icon-precomposed" href="https://materializecss.com/images/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon-precomposed" href="https://maxst.icons8.com/vue-static/icon/icons8-favicon.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
-    <link rel="icon" href="https://materializecss.com/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://maxst.icons8.com/vue-static/icon/icons8-favicon.png" sizes="32x32">
     <!--  Android 5 Chrome Color-->
-    <meta name="theme-color" content="#EE6E73">
+    <meta name="theme-color" content="#004756">
     <!-- CSS-->
     <link href="https://materializecss.com/css/prism.css" rel="stylesheet">
     <link href="https://materializecss.com/css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
@@ -60,6 +60,12 @@
             float:right;
             color:red;
         }
+        .gridster ul li .selectComponent{
+            float: right;
+            color: #0010ff;
+            clear: both;
+        }
+
       /* Fim Gridster */
 
       /* Css Para Exibição */
@@ -143,7 +149,7 @@
             function getComponents(){
                 var widgets = [];
                 for(var i=1;i<=12;i++){
-                    widgets.push( ['<li>'+i+' <span class="remove">Remover</span></li>', 3, 1])
+                    widgets.push( ['<li>'+i+' <span class="remove">Remover</span><span class="selectComponent">Selecionar Component</span></li>', 3, 1])
                 }
                 return widgets; 
             }  
@@ -160,7 +166,7 @@
             } 
 
             $(document).on( "click", "#addComponentButton", function() { 
-                gridster.add_widget.apply(gridster, ['<li>new <span class="remove">Remover</span></li>', 3, 1]);
+                gridster.add_widget.apply(gridster, ['<li>new <span class="remove">Remover</span><span class="selectComponent">Selecionar Component</span></li>', 3, 1]);
             });
         
             $(document).on( "click", ".gridster ul .remove", function() {  
